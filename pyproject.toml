@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "retro-banner"
+version = "0.1.0"
+description = "A tiny terminal banner generator with a retro feel."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = ["banner", "terminal", "ascii-art", "cli"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Terminals",
+]
+
+[project.scripts]
+retro-banner = "retro_banner.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/retro_banner"]
